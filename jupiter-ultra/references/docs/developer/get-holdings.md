@@ -1,0 +1,73 @@
+---
+title: Get Holdings
+source_url: https://dev.jup.ag/docs/ultra/get-holdings
+section: developer
+---
+
+# Get Holdings
+
+> Retrieve detailed token holdings and balances for a wallet address.
+
+The `/ultra/v1/holdings/{address}` endpoint returns all token holdings for a wallet, including token account details (amount, frozen status, ATA flag, decimals). The top-level response contains the native SOL balance. For SOL-only queries, use `/holdings/{address}/native`.
+
+Fetch token holdings for a wallet:
+
+```js  theme={null}
+const holdingsResponse = await (
+  await fetch(`https://api.jup.ag/ultra/v1/holdings/3X2LFoTQecbpqCR7G5tL1kczqBKurjKPHhKSZrJ4wgWc`,
+    {
+      headers: {
+        'x-api-key': 'your-api-key',
+      },
+    }
+  )
+).json();
+
+console.log(JSON.stringify(holdingsResponse, null, 2));
+```
+
+## Holdings Response
+
+The holdings response will return the following:
+
+* A list of token holdings for the user's wallet address.
+* Token account information for each token holding.
+* Note that the top level response outside of `tokens` is the native SOL balance.
+
+:::tip
+For tokens with more than thousands of token holdings, the response may be slow - depending on the number of token holdings, the response time may vary.
+
+If you only need the native SOL balance, you can use `/holdings/{address}/native` to get the native SOL balance.
+:::
+
+**Successful example response:**
+
+```json  theme={null}
+{
+    "amount": "1000000000",
+    "uiAmount": 1,
+    "uiAmountString": "1",
+    "tokens": {
+        "jupSoLaHXQiZZTSfEWMTRRgpnyFm8f6sZdosWBjx93v": [
+            {
+                "account": "tokenaccountaddress",
+                "amount": "1000000000",
+                "uiAmount": 1,
+                "uiAmountString": "1",
+                "isFrozen": false,
+                "isAssociatedTokenAccount": true,
+                "decimals": 9,
+                "programId": "TokenkegQfeZyiNwAJbNbGKPFXCWuBvf9Ss623VQ5DA"
+            }
+        ]
+    }
+}
+```
+
+**Failed example response:**
+
+```json  theme={null}
+{
+  "error": "Invalid address"
+}
+```

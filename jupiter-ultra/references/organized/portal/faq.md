@@ -1,0 +1,59 @@
+# Portal: FAQ
+
+- Source: https://dev.jup.ag/portal/faq
+- Snapshot: ../../raw/portal/portal__faq.md
+
+---
+
+## Source Content
+
+### FAQ
+
+> Frequently asked questions about Jupiter Portal: tier differences, API key usage, payment, upgrades, and using Pro and Ultra together.
+
+<Tip>
+  For more detailed explanation, please read [API Setup](/portal/setup) and [API Rate Limit](/portal/rate-limit) docs as well.
+</Tip>
+
+<AccordionGroup>
+  <Accordion title="Does Free or Ultra tier need payment?">
+    * No, you do not need to pay for Free or Ultra.
+    * For both, you will need to log in first to generate an API Key and use it with `api.jup.ag`.
+  </Accordion>
+
+  <Accordion title="Does Pro tier have any advantages from Free or Ultra?">
+    * By purchasing a Pro tier, you are only accessing higher rate limits with no differences in usage, data freshness and latency.
+    * Though, Pro tier covers all endpoints, excluding Ultra Swap API. While Ultra Swap API has its own rate limit system.
+  </Accordion>
+
+  <Accordion title="Can I use the same API key for all endpoints?">
+    * Yes, API keys are universal across both Fixed Rate Limit and Dynamic Rate Limit system.
+    * For example, if you have purchased the pro tier, you can still use the same API Key for Ultra Swap API.
+  </Accordion>
+
+  <Accordion title="Does the API Key apply immediately?">
+    * No, it will take 2-5 minutes for it to be reflected.
+  </Accordion>
+
+  <Accordion title="What happens if I upgrade/downgrade my tier?">
+    * You can only upgrade/downgrade your Pro tier.
+    * The amount payable is pro-rated.
+    * Upgrade happens immediately, but it is still required to be reflected.
+    * Downgrade will happen at the end of the billing period if you are to renew the tier.
+
+    Refer to [Payment Method](/portal/payment) for more details.
+  </Accordion>
+
+  <Accordion title="Can I use both Pro and Ultra endpoints together?">
+    * Yes. You can maintain a Pro subscription for all other API routes while integrating Ultra endpoints separately.
+    * Do note that purchasing a Pro tier, does not apply its rate limits to Ultra Swap API.
+  </Accordion>
+</AccordionGroup>
+
+#### For more support
+
+* Please reach out to us.
+* If you have increasing demand and growth in your app, and need custom rate limits or payment options beyond the provided in Portal.
+* If you require higher base quota for Ultra tier to bootstrap your product.
+* If you have questions or need support on Portal, [open a ticket](https://support.jup.ag/hc/en-us/requests/new?ticket_form_id=18069133114012\&tf_18541841140892=api_or_developer_support).
+* Join the [Telegram channel](https://t.me/jup_dev) or [Discord channel](https://discord.com/channels/897540204506775583/1115543693005430854) to subscribe to updates.

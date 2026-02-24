@@ -10,12 +10,12 @@ Use the local reference snapshots first, and refresh them when the user asks for
 ## Workflow
 
 1. Identify request type:
-- Endpoint behavior or payloads: use `references/api-docs.md` and `references/raw/api/`.
-- Integration guides and concepts: use `references/developer-docs.md` and `references/raw/developer/`.
-- API key, quota, payment, migration, and portal settings: use `references/portal-docs.md` and `references/raw/portal/`.
+- Endpoint behavior or payloads: use `references/docs/api/`.
+- Integration guides and concepts: use `references/docs/developer/`.
+- API key, quota, payment, migration, and portal settings: use `references/docs/portal/`.
 
 2. Pull evidence from raw docs:
-- Search raw snapshots with `rg` for endpoint paths, field names, or phrases.
+- Search formatted snapshots with `rg` for endpoint paths, field names, or phrases.
 - Prefer exact API paths (for example `/ultra/v1/order`, `/ultra/v1/execute`) when extracting details.
 
 3. Keep answers implementation-focused:
@@ -25,13 +25,15 @@ Use the local reference snapshots first, and refresh them when the user asks for
 4. Refresh docs when needed:
 - Run `scripts/refresh_sources.sh` to rebuild `references/source-urls.txt` from sitemap filters.
 - Run `scripts/fetch_docs.sh` to re-download all tracked pages into `references/raw/`.
+- Run `scripts/build_pretty_docs.py` to regenerate formatted docs under `references/docs/`.
 
 ## Local Resources
 
 - URL list: `references/source-urls.txt`
-- API index: `references/api-docs.md`
-- Developer index: `references/developer-docs.md`
-- Portal index: `references/portal-docs.md`
+- Formatted root index: `references/docs/README.md`
+- Formatted API index: `references/docs/api/README.md`
+- Formatted developer index: `references/docs/developer/README.md`
+- Formatted portal index: `references/docs/portal/README.md`
 - Raw API pages: `references/raw/api/`
 - Raw developer pages: `references/raw/developer/`
 - Raw portal pages: `references/raw/portal/`

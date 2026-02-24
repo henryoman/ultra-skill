@@ -1,19 +1,13 @@
-# Jupiter Ultra Developer Docs Index
+# Jupiter Ultra Developer Docs
 
-These are the downloaded developer-guide pages for Ultra.
+Primary organized docs: `references/organized/developer/`
 
-- https://dev.jup.ag/docs/ultra
-- https://dev.jup.ag/docs/ultra/add-fees-to-ultra
-- https://dev.jup.ag/docs/ultra/add-payer
-- https://dev.jup.ag/docs/ultra/execute-order
-- https://dev.jup.ag/docs/ultra/fees
-- https://dev.jup.ag/docs/ultra/gasless
-- https://dev.jup.ag/docs/ultra/get-holdings
-- https://dev.jup.ag/docs/ultra/get-order
-- https://dev.jup.ag/docs/ultra/get-shield
-- https://dev.jup.ag/docs/ultra/get-started
-- https://dev.jup.ag/docs/ultra/manual-mode
-- https://dev.jup.ag/docs/ultra/plugin-integration
-- https://dev.jup.ag/docs/ultra/rate-limit
-- https://dev.jup.ag/docs/ultra/response
-- https://dev.jup.ag/docs/ultra/search-token
+- Index: [organized/developer/README.md](./organized/developer/README.md)
+- Raw snapshots: `references/raw/developer/`
+
+For implementation guides, start with:
+
+- [organized/developer/overview.md](./organized/developer/overview.md)
+- [organized/developer/get-started.md](./organized/developer/get-started.md)
+- [organized/developer/get-order.md](./organized/developer/get-order.md)
+- [organized/developer/execute-order.md](./organized/developer/execute-order.md)

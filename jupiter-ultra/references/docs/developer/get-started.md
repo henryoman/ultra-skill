@@ -1,0 +1,74 @@
+---
+title: Ultra Swap API Quick Start
+source_url: https://dev.jup.ag/docs/ultra/get-started
+section: developer
+---
+
+# Ultra Swap API Quick Start
+
+> Quick start guide to the Ultra Swap API: get an order, sign it, and execute.
+
+Ultra Swap uses a two-step flow: first call `GET /ultra/v1/order` to receive a base64-encoded unsigned transaction, then sign it and submit via `POST /ultra/v1/execute`. This page lists all Ultra endpoints and guides.
+
+## Overview
+
+| Step | Endpoint                                       | Description                                                                                                        |
+| :--- | :--------------------------------------------- | :----------------------------------------------------------------------------------------------------------------- |
+| 1    | [**Get Order**](/docs/ultra/get-order)         | Request for a quote and swap transaction.                                                                          |
+| 2    | [**Execute Order**](/docs/ultra/execute-order) | Sign and execute the swap transaction.                                                                             |
+| -    | [**Search Token**](/docs/ultra/search-token)   | Search for a token by its symbol, name or mint address.                                                            |
+| -    | [**Get Holdings**](/docs/ultra/get-holdings)   | Request for token balances of an account.                                                                          |
+| -    | [**Get Shield**](/docs/ultra/get-shield)       | Enhanced security feature to provide critical token information contributing to better informed trading decisions. |
+| -    | [**API Reference**](/api-reference/ultra)      | Reference for the Ultra Swap API endpoints.                                                                        |
+
+## Guides
+
+| Guide                                                       | Description                                                                     |
+| :---------------------------------------------------------- | :------------------------------------------------------------------------------ |
+| [**Gasless Support**](/docs/ultra/gasless)                  | Important notes of gasless mechanisms.                                          |
+| [**Fees**](/docs/ultra/fees)                                | Breakdown of fees involved.                                                     |
+| [**Manual Mode**](/docs/ultra/manual-mode)                  | Control Ultra Swap API parameters like slippage or priority fee settings.       |
+| [**Add Fees to Ultra Swap**](/docs/ultra/add-fees-to-ultra) | Add custom integrator fees to your Ultra Swap transaction.                      |
+| [**Add Integrator Payer**](/docs/ultra/add-payer)           | Add integrator payer to pay for networks fees and rent on behalf of your users. |
+| [**Plugin Integration**](/docs/ultra/plugin-integration)    | Walkthrough on how to integrate Ultra Swap API with Jupiter Plugin.             |
+
+## FAQ
+
+**Frequently asked questions:** Integrator fees are 5–10 bps (you keep 80%), Ultra transactions cannot be modified, and rate limits scale dynamically with swap volume.
+
+<AccordionGroup>
+  <Accordion title="Can I add custom integrator fees to Ultra Swap API?">
+    * **Integrator without custom fees**: Do note that when your users swap using Ultra Swap, we take 5 to 10 bps of the swap amount as a fee.
+    * **Integrator with custom fees**: If you are an integrator, you can add custom integrator fees via Ultra Swap API and Jupiter will take 20% of the integrator fees. Please refer to the [Add Fees To Ultra Swap](/docs/ultra/add-fees-to-ultra) guide for more information.
+  </Accordion>
+
+  <Accordion title="Can I modify Ultra Swap transactions?">
+    * No, you cannot modify Ultra Swap transactions.
+    * Ultra Swap is intended to use as is, without any modifications.
+  </Accordion>
+
+  <Accordion title="What is the rate limit for Ultra Swap API?">
+    * Dynamic Rate Limits are now applied to Ultra Swap API.
+
+      * No Pro plans or payment needed.
+      * Simply generate the universal API Key via [Portal](https://portal.jup.ag)
+      * Rate limits scale together with your swap volume.
+      * [Read more about Ultra Swap API Dynamic Rate Limit](/portal/rate-limit).
+  </Accordion>
+</AccordionGroup>
+
+## JavaScript Example (API)
+
+```js
+const url = new URL('https://api.jup.ag/ultra/v1/order');
+// Add required params as needed for this endpoint
+// url.searchParams.set('inputMint', '<MINT>');
+// url.searchParams.set('outputMint', '<MINT>');
+// url.searchParams.set('amount', '<AMOUNT_IN_BASE_UNITS>');
+
+const res = await fetch(url, {
+  headers: { 'x-api-key': process.env.JUP_API_KEY }
+});
+const data = await res.json();
+console.log(data);
+```

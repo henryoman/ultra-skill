@@ -1,0 +1,57 @@
+# Portal: Payment Methods
+
+- Source: https://dev.jup.ag/portal/payment
+- Snapshot: ../../raw/portal/portal__payment.md
+
+---
+
+## Source Content
+
+### Payment Methods
+
+> Payment methods for Jupiter Portal
+
+## Overview
+
+* **Free and Ultra tier**: No payment required.
+* **Pro tier**: Tiered pricing.
+
+<Note>
+  **Important Note**
+
+  The payment methods provided on Portal only applies to the **PRO PLAN**.
+
+  For Free and Ultra tiers, you can generate an API key and use the API directly without any payment on Portal.
+</Note>
+
+## Payment Method
+
+To pay for higher rate limits on Pro plan, you can choose either of the payment methods via the Portal UI, we currently support 2 payment methods:
+
+* Crypto - USDC on Solana via Helio
+* Credit card - USD via CoinFlow
+
+### Crypto
+
+| Property                       | Details                                                                                                                                                                                                                                                       |
+| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| **Payment**                    | The payment is done in Solana USDC only.                                                                                                                                                                                                                      |
+| **Cadence**                    | The payment is currently done on a monthly basis, which means you will need to revisit Portal and manually renew each month.                                                                                                                                  |
+| **Expiry**                     | 7 days before the plan expires, you will see the state change in the dashboard's table and receive an automated email as a reminder to renew. Upon expiry, your key will remain valid for a grace period but will be disabled (but not deleted) when it ends. |
+| **Renewal**                    | If you choose to "Renew", the plan will be renewed to the same plan as the previous month. To change plan, you can upgrade/downgrade your plan at any time and cost will be pro-rated.                                                                        |
+| **Fee**                        | Jupiter incurs the payment service fees.                                                                                                                                                                                                                      |
+| **Changing of payment method** | From Crypto to Credit Card:<br />1. Wait for plan to expire<br />2. Pay using the credit card payment method.                                                                                                                                                 |
+
+### Credit Card
+
+| Property                       | Details                                                                                                                                                                                                                                                                                                                                            |
+| :----------------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Payment**                    | The payment is done in USD only.                                                                                                                                                                                                                                                                                                                   |
+| **Cadence**                    | The subscription is automatically renewed and funds deducted on a monthly basis.                                                                                                                                                                                                                                                                   |
+| **Fee**                        | User incurs the credit card payment service fees at 3.4% of the payment amount + \$0.25.                                                                                                                                                                                                                                                           |
+| **Changing of cards**          | For security, changing of cards require a few extra steps and cannot be done in the middle of the subscription.<br />1. Cancel current plan<br />2. Wait for plan to expire<br />3. Resubscribe a plan with the new card.                                                                                                                          |
+| **Upgrading of plans**         | You can upgrade your plan at any time.<br />- The cost of the new plan will be charged immediately, while the pro-rated unused cost of the previous plan will be refunded.<br />- The subscription date will be updated to the date of the upgrade.<br />- Do note that the refund will be processed at least 1-2 business days after the upgrade. |
+| **Downgrading of plans**       | You can downgrade by cancelling your plan and subscribing to a lower plan after expiry.                                                                                                                                                                                                                                                            |
+| **Cancellation of plans**      | No refund will be given for unused days and the Pro plan will continue until the expected expiry date.                                                                                                                                                                                                                                             |
+| **Changing of payment method** | From Credit Card to Crypto:<br />1. Cancel current plan so it does not automatically renew<br />2. Wait for plan to expire<br />3. Pay using the crypto payment method.                                                                                                                                                                            |
+| **Other Caveats**              | - Registered card address must be the billing address.<br />- No usage of disposable cards as payments are made for a recurring subscription plan.                                                                                                                                                                                                 |

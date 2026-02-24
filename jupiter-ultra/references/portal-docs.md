@@ -1,11 +1,13 @@
-# Jupiter Ultra Portal Docs Index
+# Jupiter Ultra Portal Docs
 
-These are the downloaded portal pages used by Ultra API integrators.
+Primary organized docs: `references/organized/portal/`
 
-- https://dev.jup.ag/portal/faq
-- https://dev.jup.ag/portal/latency
-- https://dev.jup.ag/portal/migrate-from-lite-api
-- https://dev.jup.ag/portal/payment
-- https://dev.jup.ag/portal/rate-limit
-- https://dev.jup.ag/portal/responses
-- https://dev.jup.ag/portal/setup
+- Index: [organized/portal/README.md](./organized/portal/README.md)
+- Raw snapshots: `references/raw/portal/`
+
+For account setup and operations, start with:
+
+- [organized/portal/setup.md](./organized/portal/setup.md)
+- [organized/portal/rate-limit.md](./organized/portal/rate-limit.md)
+- [organized/portal/payment.md](./organized/portal/payment.md)
+- [organized/portal/faq.md](./organized/portal/faq.md)
