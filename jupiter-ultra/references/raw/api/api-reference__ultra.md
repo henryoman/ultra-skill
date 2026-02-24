@@ -1,0 +1,37 @@
+> ## Documentation Index
+> Fetch the complete documentation index at: https://dev.jup.ag/llms.txt
+> Use this file to discover all available pages before exploring further.
+
+# Ultra Swap API
+
+> Endpoints for quotes, execution, token search, holdings, and security checks.
+
+<CardGroup>
+  <Card title="order" href="/api-reference/ultra/order" icon="file-lines" horizontal>
+    Request for a base64-encoded unsigned swap transaction to be used in `POST /ultra/v1/execute`
+  </Card>
+
+  <Card title="execute" href="/api-reference/ultra/execute" icon="file-lines" horizontal>
+    Execute the signed transaction and get the execution status
+  </Card>
+
+  <Card title="holdings" href="/api-reference/ultra/holdings" icon="file-lines" horizontal>
+    Request for token balances of an account
+  </Card>
+
+  <Card title="shield" href="/api-reference/ultra/shield" icon="file-lines" horizontal>
+    Request for token information and warnings of mints
+  </Card>
+
+  <Card title="balances (deprecated)" href="/api-reference/ultra/balances" icon="file-lines" horizontal>
+    Request for token balances of an account
+  </Card>
+
+  <Card title="search" href="/api-reference/ultra/search" icon="file-lines" horizontal>
+    Request a search by token's symbol, name or mint address
+  </Card>
+
+  <Card title="routers" href="/api-reference/ultra/routers" icon="file-lines" horizontal>
+    Request for the list of routers available in the routing engine of Ultra Swap, which is [Juno](/docs/routing#juno-liquidity-engine)
+  </Card>
+</CardGroup>

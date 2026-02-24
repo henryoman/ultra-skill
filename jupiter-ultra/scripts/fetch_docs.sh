@@ -24,10 +24,11 @@ while IFS= read -r url; do
 
   slug="${url#https://dev.jup.ag/}"
   slug="${slug//\//__}"
-  file="$RAW_DIR/$section/${slug}.html"
+  file="$RAW_DIR/$section/${slug}.md"
 
-  echo "Fetching: $url"
-  curl -fsSL "$url" -o "$file"
+  md_url="${url}.md"
+  echo "Fetching: $md_url"
+  curl -fsSL "$md_url" -o "$file"
 done < "$URLS_FILE"
 
 echo "Done. Files written under $RAW_DIR"
